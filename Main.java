@@ -12,12 +12,17 @@ public class Main {
             CardLayout cardLayout = new CardLayout();
             JPanel panelContainer = new JPanel(cardLayout);
 
-            Menu firstPanel = new Menu(cardLayout, panelContainer);
-            Map secondPanel = new Map(cardLayout, panelContainer);
+            Menu menu = new Menu(cardLayout, panelContainer);
+            Map map = new Map(cardLayout, panelContainer, "images/safari_map.jpg");
+            AdditionGame additionGame = new AdditionGame(cardLayout, panelContainer);
 
-            panelContainer.add(firstPanel, "Menu");
-            panelContainer.add(secondPanel, "Map");
 
+            panelContainer.add(menu, "Menu");
+            panelContainer.add(map, "Map");
+            panelContainer.add(additionGame, "addition_game");
+            additionGame.setExerciseCompletionListener(menu);
+
+            frame.setLocationRelativeTo(null);
             frame.add(panelContainer);
             frame.setVisible(true);
         });
