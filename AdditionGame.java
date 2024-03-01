@@ -1,8 +1,11 @@
 import javax.swing.*;
+import javax.swing.border.Border;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 public class AdditionGame extends JPanel {
     private int correctAnswer;
@@ -27,7 +30,10 @@ public class AdditionGame extends JPanel {
             buttonPanel.add(answerButtons[i]);
         }
 
-        buttonPanel.setBounds(200, 100, 200, 100);
+        buttonPanel.setBounds(70, 400, 600, 200);
+        Border border = BorderFactory.createLineBorder(Color.BLUE, 5);
+        buttonPanel.setBorder(border);
+
 
 
         updateExercise();
@@ -36,10 +42,11 @@ public class AdditionGame extends JPanel {
 
 
         resultLabel = new JLabel("");
-        resultLabel.setBounds(220, 200, 150, 50);
+        resultLabel.setBounds(700, 200, 200, 50);
+        resultLabel.setFont(new Font("Arial", Font.BOLD, 50));
 
         JButton toMenuButton = new JButton("Go to Menu");
-        toMenuButton.setBounds(250, 530, 100, 30);
+        toMenuButton.setBounds(450, 730, 100, 30);
         toMenuButton.addActionListener(e -> cardLayout.show(panelContainer, "Menu"));
 
 
@@ -73,14 +80,27 @@ public class AdditionGame extends JPanel {
         }
     }
 
+
+
     private class CircularButton extends JButton {
+
+        private String buttonText;
+        private Image buttonImage;
 
         public CircularButton(String label) {
             super(label);
-            // These UI adjustments are optional but recommended
+            this.buttonImage = new ImageIcon("images/button.png").getImage();
+            this.buttonText = label;
+
             setContentAreaFilled(false);
             setFocusPainted(false);
+            setBorderPainted(false);
+
         }
+
+
+
+
 
         @Override
         protected void paintComponent(Graphics g) {
@@ -88,38 +108,55 @@ public class AdditionGame extends JPanel {
             super.paintComponent(g);
 
             // Custom painting code for the circular shape
-            g.drawOval(0, 0, getWidth() - 1, getHeight() - 1);
+            g.drawImage(buttonImage, 0, 0, getWidth(), getHeight(), this);
+
+            // Set text properties
+            g.setFont(new Font("Arial", Font.BOLD, 50)); // Customize font here
+            g.setColor(Color.WHITE); // Customize text color here
+
+            // Draw the text over the image
+            FontMetrics fm = g.getFontMetrics();
+            int x = (getWidth() - fm.stringWidth(buttonText)) / 2;
+            int y = ((getHeight() - fm.getHeight()) / 2) + fm.getAscent();
+            g.drawString(buttonText, x, y);
+        }
+
+        public void setButtonText(String newText) {
+            this.buttonText = newText;
+            repaint(); // Redraw the button with the new text
         }
 
         @Override
         public Dimension getPreferredSize() {
-            // Ensures the button has a square shape to maintain the circle's aspect ratio
-            Dimension size = super.getPreferredSize();
-            int max = Math.max(size.width, size.height);
-            setPreferredSize(new Dimension(max, max));
-            return new Dimension(max, max);
+            return new Dimension(180, 180);
         }
     }
 
 
     private void updateExercise() {
         Random rand = new Random();
-        int number1 = rand.nextInt(10); // Generate a number between 0 and 49
-        int number2 = rand.nextInt(10); // Generate a number between 0 and 49
+        int number1 = rand.nextInt(10); // Generate a number between 0 and 9
+        int number2 = rand.nextInt(10); // Generate a number between 0 and 9
         correctAnswer = number1 + number2;
         questionLabel.setText("What is " + number1 + " + " + number2 + "? ");
 
-        int correctButtonIndex = rand.nextInt(3);
+        int correctButtonIndex = rand.nextInt(answerButtons.length); // Assuming there are more than 3 buttons
+        Set<Integer> usedAnswers = new HashSet<>(); // To track used answers
+        usedAnswers.add(correctAnswer); // Add correct answer to prevent duplication
+
         for (int i = 0; i < answerButtons.length; i++) {
             if (i == correctButtonIndex) {
+                answerButtons[i].setButtonText(String.valueOf(correctAnswer));
                 answerButtons[i].setText(String.valueOf(correctAnswer));
             } else {
-                // Generate a random number for the button, ensuring it is not the correct answer
                 int wrongAnswer;
                 do {
-                    wrongAnswer = correctAnswer + rand.nextInt(3) - 3; // Generate numbers in a range around the correct answer
-                } while (wrongAnswer == correctAnswer);
+                    // Adjust range as needed to ensure a diverse set of wrong answers
+                    wrongAnswer = correctAnswer + rand.nextInt(7) - 3; // Generate numbers in a broader range around the correct answer
+                } while (usedAnswers.contains(wrongAnswer)); // Ensure uniqueness of wrong answers
                 answerButtons[i].setText(String.valueOf(wrongAnswer));
+                answerButtons[i].setButtonText(String.valueOf(wrongAnswer));
+                usedAnswers.add(wrongAnswer); // Add to used answers to avoid repetition
             }
         }
     }

@@ -6,7 +6,7 @@ public class Main {
         SwingUtilities.invokeLater(() -> {
             JFrame frame = new JFrame("Math Tutor");
             frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-            frame.setSize(600, 600);
+            frame.setSize(1000, 1000);
             frame.setResizable(false);
 
             CardLayout cardLayout = new CardLayout();
