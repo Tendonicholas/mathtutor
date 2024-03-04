@@ -8,6 +8,9 @@ public class Menu extends JPanel implements ExerciseCompletionListener{
         JButton toSecondPageButton = new JButton("Start");
         toSecondPageButton.addActionListener(e -> cardLayout.show(panelContainer, "Map"));
 
+        JButton toRewardPage = new JButton("Reward Page");
+        toRewardPage.addActionListener(e -> cardLayout.show(panelContainer, "rewardPage"));
+
         progressBar = new JProgressBar(0, 100);
         progressBar.setValue(0);
         progressBar.setStringPainted(true); // This will show the progress percentage
@@ -15,6 +18,7 @@ public class Menu extends JPanel implements ExerciseCompletionListener{
 
         add(progressBar);
         add(toSecondPageButton);
+        add(toRewardPage);
     }
 
     @Override

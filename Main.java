@@ -14,12 +14,16 @@ public class Main {
 
             Menu menu = new Menu(cardLayout, panelContainer);
             Map map = new Map(cardLayout, panelContainer, "images/safari_map.jpg");
+            RewardPage rewardPage = new RewardPage(cardLayout, panelContainer);
             AdditionGame additionGame = new AdditionGame(cardLayout, panelContainer);
 
 
             panelContainer.add(menu, "Menu");
             panelContainer.add(map, "Map");
             panelContainer.add(additionGame, "addition_game");
+
+            panelContainer.add(rewardPage, "rewardPage");
+
             additionGame.setExerciseCompletionListener(menu);
 
             frame.setLocationRelativeTo(null);

@@ -15,9 +15,15 @@ public class AdditionGame extends JPanel {
 
     private ExerciseCompletionListener listener;
 
+    private CardLayout cardLayout;
+    private JPanel panelContainer;
+
 
     public AdditionGame(CardLayout cardLayout, JPanel panelContainer) {
         setLayout(null);
+
+        this.cardLayout = cardLayout;
+        this.panelContainer = panelContainer;
 
 
         questionLabel = new JLabel();
@@ -72,6 +78,7 @@ public class AdditionGame extends JPanel {
                 resultLabel.setText("Correct!");
                 if (listener != null) {
                     listener.onExerciseCompleted();
+                    cardLayout.show(panelContainer, "rewardPage");
                 }
             } else {
                 resultLabel.setText("Incorrect, try a new one!");
