@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.*?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.math_app.grade1.Tutorial">
+   <children>
+      <ImageView fx:id="backButton" fitHeight="91.0" fitWidth="105.0" layoutX="44.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/back_btn.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="143.0" layoutY="123.0" prefHeight="364.0" prefWidth="563.0" style="-fx-border-color: black; -fx-border-width: 12; -fx-border-radius: 28; -fx-background-color: transparent;" />
+      <WebView fx:id="webView" layoutX="155.0" layoutY="134.0" prefHeight="341.0" prefWidth="539.0" />
+      <Label layoutX="141.0" layoutY="126.0" prefHeight="70.0" prefWidth="563.0" style="-fx-background-color: transparent;" />
+      <Label layoutX="581.0" layoutY="441.0" prefHeight="34.0" prefWidth="205.0" style="-fx-background-color: transparent;" />
+      <Label layoutX="141.0" layoutY="292.0" prefHeight="137.0" prefWidth="563.0" style="-fx-background-color: transparent;" />
+   </children>
+</AnchorPane>

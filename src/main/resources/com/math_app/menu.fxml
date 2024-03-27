@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.math_app.Menu">
+   <children>
+      <Label fx:id="titleLabel" layoutX="341.0" layoutY="70.0" text="Learning Math with Eli">
+         <font>
+            <Font name="System Bold" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="playButton" fitHeight="150.0" fitWidth="200.0" layoutX="425.0" layoutY="200.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/play_btn.png" />
+         </image></ImageView>
+      <ImageView fx:id="userAvatar" fitHeight="248.0" fitWidth="192.0" layoutX="119.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/play_btn.png" />
+         </image></ImageView>
+      <Label fx:id="gradeLabel" layoutX="471.0" layoutY="446.0" text="Grade: " />
+      <ProgressBar fx:id="progressBar" layoutX="390.0" layoutY="542.0" prefWidth="200.0" progress="1.0" />
+
+   </children>
+</AnchorPane>
