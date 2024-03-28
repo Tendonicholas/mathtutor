@@ -14,7 +14,7 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.util.*;
 
-public class Exercise {
+public class Exercise1 {
 
     public ImageView backButton;
     public Label number1, number2, number3;

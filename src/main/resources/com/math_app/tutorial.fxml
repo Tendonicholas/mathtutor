@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.web.*?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.math_app.grade1.Tutorial">
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.math_app.Tutorial">
    <children>
       <ImageView fx:id="backButton" fitHeight="91.0" fitWidth="105.0" layoutX="44.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
          <image>

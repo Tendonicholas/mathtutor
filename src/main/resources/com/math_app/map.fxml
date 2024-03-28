@@ -5,53 +5,33 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.math_app.Map">
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.math_app.grade1.Grade1_Map">
    <children>
       <ScrollPane layoutX="-6.0" layoutY="-8.0" prefHeight="710.0" prefWidth="1010.0">
          <content>
             <Pane prefHeight="901.0" prefWidth="984.0" style="-fx-background-color: transparent; -fx-padding: 0;">
                <children>
-                  <Label fx:id="tutorial" alignment="CENTER" layoutX="137.0" layoutY="189.0" prefHeight="125.0" prefWidth="117.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Tutorial">
+                  <Label fx:id="tutorial1" alignment="CENTER" layoutX="101.0" layoutY="211.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Tutorial">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Label fx:id="firstExercise" alignment="CENTER" layoutX="434.0" layoutY="188.0" prefHeight="125.0" prefWidth="117.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Exercise">
+                  <Label fx:id="firstExercise" alignment="CENTER" layoutX="415.0" layoutY="211.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Exercise">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" layoutX="728.0" layoutY="189.0" prefHeight="125.0" prefWidth="117.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Exercise">
+                  <Label fx:id="exercise2" alignment="CENTER" layoutX="571.0" layoutY="451.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Exercise">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" layoutX="728.0" layoutY="423.0" prefHeight="125.0" prefWidth="117.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Tutorial">
+                  <Label fx:id="tutorial2" alignment="CENTER" layoutX="715.0" layoutY="211.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Tutorial">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>
                   </Label>
-                  <Label alignment="CENTER" layoutX="434.0" layoutY="422.0" prefHeight="125.0" prefWidth="117.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Exercise">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="137.0" layoutY="423.0" prefHeight="125.0" prefWidth="117.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Quiz">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="137.0" layoutY="659.0" prefHeight="125.0" prefWidth="117.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Exercise">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="434.0" layoutY="658.0" prefHeight="125.0" prefWidth="117.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Exercise">
-                     <font>
-                        <Font name="System Bold" size="24.0" />
-                     </font>
-                  </Label>
-                  <Label alignment="CENTER" layoutX="728.0" layoutY="659.0" prefHeight="125.0" prefWidth="117.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Test">
+                  <Label alignment="CENTER" layoutX="256.0" layoutY="451.0" prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: white; -fx-border-color: black; -fx-border-radius: 32px; -fx-border-width: 10px; -fx-background-radius: 32px;" text="Quiz">
                      <font>
                         <Font name="System Bold" size="24.0" />
                      </font>

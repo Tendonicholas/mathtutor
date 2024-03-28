@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.math_app.grade1.Exercise1">
+   <children>
+       <ImageView fx:id="backButton" fitHeight="91.0" fitWidth="105.0" layoutX="44.0" layoutY="42.0" pickOnBounds="true" preserveRatio="true">
+           <image>
+               <Image url="@../../images/back_btn.png" />
+           </image>
+       </ImageView>
+      <Label alignment="CENTER" layoutX="412.0" layoutY="86.0" text="What is">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="questionLabel" alignment="CENTER" layoutX="424.0" layoutY="159.0" prefHeight="73.0" prefWidth="177.0" text="1 + 1 ">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Label>
+      <Label fx:id="number1" alignment="CENTER" layoutX="202.0" layoutY="327.0" prefHeight="131.0" prefWidth="133.0" style="-fx-background-color: orange; -fx-background-radius: 100;" text="Label" />
+      <Label fx:id="number2" alignment="CENTER" layoutX="424.0" layoutY="327.0" prefHeight="131.0" prefWidth="133.0" style="-fx-background-color: orange; -fx-background-radius: 100;" text="Label" />
+      <Label fx:id="number3" alignment="CENTER" layoutX="649.0" layoutY="327.0" prefHeight="131.0" prefWidth="133.0" style="-fx-background-color: orange; -fx-background-radius: 100;" text="Label" />
+      <Label fx:id="resultLabel" alignment="CENTER" layoutX="398.0" layoutY="540.0" prefHeight="73.0" prefWidth="229.0" text="Label">
+         <font>
+            <Font name="System Bold" size="38.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

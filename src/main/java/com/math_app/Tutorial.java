@@ -1,4 +1,4 @@
-package com.math_app.grade1;
+package com.math_app;
 import com.math_app.DatabaseUtil;
 import com.math_app.SceneChanger;
 import com.math_app.SessionManager;
@@ -20,12 +20,15 @@ public class Tutorial {
     @FXML
     private WebView webView;
 
+    private String videoUrl;
+
     public void initialize() {
+
         WebEngine webEngine = webView.getEngine();
         // Use the embed URL, which you can obtain from the YouTube video's share option
-        String videoUrl = "https://www.youtube.com/embed/L0Oq1xqCQss?autoplay=1"; // Link to the video
         webEngine.load(videoUrl);
         backButton.setDisable(true);
+
 
         backButton.setOnMouseClicked(event -> {
             // Get the current stage (window) from the playButton
@@ -59,6 +62,22 @@ public class Tutorial {
 
         } catch (SQLException e) {
             e.printStackTrace();
+        }
+    }
+
+    // Method to set the video URL and load the video
+    public void setAndLoadVideoUrl(String url) {
+        this.videoUrl = url;
+        loadVideo();
+    }
+
+    // Loads the video into the WebView
+    private void loadVideo() {
+        if (videoUrl != null && webView != null) {
+            WebEngine webEngine = webView.getEngine();
+            webEngine.load(videoUrl);
+        } else {
+            System.out.println("WebView is not initialized or URL is null.");
         }
     }
 }

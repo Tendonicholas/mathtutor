@@ -35,5 +35,27 @@ public class SceneChanger {
             e.printStackTrace();
         }
     }
+
+    public static void changeSceneWithParameters(Stage stage, String fxmlFile, String title, String videoUrl) {
+        try {
+            // Load the FXML file
+            FXMLLoader loader = new FXMLLoader(SceneChanger.class.getResource(fxmlFile));
+            Parent root = loader.load();
+
+            // Get the controller and set the video URL if it's an instance of Tutorial
+            Object controller = loader.getController();
+
+            ((Tutorial) controller).setAndLoadVideoUrl(videoUrl);
+
+
+            // Show the scene
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle(title);
+            stage.show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 }
 

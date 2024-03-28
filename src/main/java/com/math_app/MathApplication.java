@@ -5,12 +5,15 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
+import java.util.List;
+
 
 public class MathApplication extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxmlLoader = new FXMLLoader(MathApplication.class.getResource("login.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(MathApplication.class.getResource("map.fxml"));
 
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Animals And Friends");
@@ -19,6 +22,8 @@ public class MathApplication extends Application {
         stage.setResizable(false); // Prevent resizing
         stage.setScene(scene);
         stage.show();
+
+
 
 
     }
